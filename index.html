@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+        /* *{
+            box-sizing: border-box;
+        } */
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background:url("https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+            font-family: 'Fredoka One', cursive;
+
+
+        }
+        /* .section{
+            background-color: white;
+            border-radius: 10px;
+        } */
+        .main-container{
+            background-color: white;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:3px ;
+            border-radius: 10px;
+            width:325px;
+        }
+        .box{
+            /* margin: 5px; */
+            padding: 10px;
+            font-size: 35px;
+            text-align: center;
+            background-color: skyblue;
+            border-radius: 3px;
+            font-family: 'Fredoka One', cursive;
+            border: none;
+        }
+        .box:hover{
+            background-color: rgb(195, 232, 246) ;
+        }
+        #b1{
+            grid-column: 1/-1;
+            border-radius: 0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background-color: rgb(3, 44, 3);
+            margin: 0;
+            height: 90px;
+            text-align: end;
+            color: white;
+            word-wrap:break-word;
+            /* word-break: break-all; */
+        }
+        #b2{
+            /* margin-top: 0; */
+            grid-column: 1/3;
+           
+           
+        }
+        #b3{
+            grid-column: 3/4;
+            border-radius: 2px;
+            
+        }
+        #b4{
+            grid-column: 4/-1;
+            border-radius: 2px;
+        }
+        /* #b5{
+
+        } */
+
+        #b19{
+            grid-column: 3/-1;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <h1>My Calculator</h1> -->
+    <!-- <section class="section"> -->
+        <div class="main-container">
+            <div class="box" id="b1"></div>
+            <button class="box" id="b2">AC</button>
+            <button class="box" id="b3">del</button>
+            <button class="box" id="b4">/</button>
+            <button class="box" id="b5">1</button>
+            <button class="box" id="b6">2</button>
+            <button class="box" id="b7">3</button>
+            <button class="box" id="b8">*</button>
+            <button class="box" id="b9">4</button>
+            <button class="box " id="b10">5</button>
+            <button class="box " id="b11">6</button>
+            <button class="box " id="b12">+</button>
+            <button class="box" id="b13">7</button>
+            <button class="box" id="b14">8</button>
+            <button class="box" id="b15">9</button>
+            <button class="box" id="b16">-</button>
+            <button class="box" id="b17">.</button>
+            <button class="box" id="b18">0</button>
+            <button class="box" id="b19">=</button>
+        </div>
+    <!-- </section> -->
+    
+    <script>
+        const screenEl = document.getElementById('b1');
+        const ACEl = document.getElementById('b2');
+        const delEl = document.getElementById('b3');
+        const divEl = document.getElementById('b4');
+        const oneEl = document.getElementById('b5');
+        const twoEl = document.getElementById('b6');
+        const threeEl = document.getElementById('b7');
+        const mulEl = document.getElementById('b8');
+        const fourEl = document.getElementById('b9');
+        const fiveEl= document.getElementById('b10');
+        const sixEl= document.getElementById('b11');
+        const plusEl = document.getElementById('b12');
+        const sevenEl = document.getElementById('b13');
+        const eightEl = document.getElementById('b14');
+        const nineEl = document.getElementById('b15');
+        const minusEl = document.getElementById('b16');
+        const dotEl = document.getElementById('b17');
+        const zeroEl = document.getElementById('b18');
+        const equalEl = document.getElementById('b19');
+
+        // function showInputPress(pressedBtn){
+        //     document.getElementById(pressedBtn).addEventListener('click',()=>{
+        //         screenEl.innerText=btnEl.innerText;
+        //     }
+
+        //     )
+        // }
+
+        // document.getElementById(pressedBtn).addEventListener('click',()=>{
+        //         screenEl.innerText=btnEl.innerText;
+        //     }
+
+        //     )
+        
+        // function btnInputEl(elementId){
+        //     const btnEl = document.addElementBYId(elementId);
+        //     screenEl.innerText=btnEl.innerText;
+        // }
+
+        // equalEl.addEventListener('click',()=>{
+
+        // })
+        console.log(oneEl.innerText)
+            oneEl.addEventListener('click',()=>{
+                screenEl.innerText=screenEl.innerText+oneEl.innerText.toString();
+            })
+            
+            twoEl.addEventListener('click',()=>{
+                screenEl.innerText=screenEl.innerText+twoEl.innerText.toString();
+            })
+            threeEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+threeEl.innerText.toString();
+            })
+            fourEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+fourEl.innerText.toString();
+            })
+            fiveEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+fiveEl.innerText.toString();
+            })
+            sixEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+sixEl.innerText.toString();
+            })
+            plusEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+plusEl.innerText.toString();
+            })
+            ACEl.addEventListener('click',()=>{
+                screenEl.innerText= '';
+            })
+            sevenEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+sevenEl.innerText.toString();
+            })
+            eightEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+eightEl.innerText.toString();
+            })
+            nineEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+nineEl.innerText.toString();
+            })
+            dotEl.addEventListener('click',()=>{
+                if(screenEl.innerText.includes('.')) return ;
+                screenEl.innerText= screenEl.innerText+dotEl.innerText.toString();
+            })
+            minusEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+minusEl.innerText.toString();
+            })
+            mulEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+mulEl.innerText.toString();
+            })
+            divEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+divEl.innerText.toString();
+            })
+            delEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText.slice(0,-1);
+            })
+            console.log(screenEl.innerText)
+            equalEl.addEventListener('click',()=>{
+                console.log(screenEl.innerText);
+                screenEl.innerText=eval(screenEl.innerText);
+            })
+            
+    </script>
+</body>
+</html>
