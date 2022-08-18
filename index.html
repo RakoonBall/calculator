@@ -188,8 +188,11 @@
             nineEl.addEventListener('click',()=>{
                 screenEl.innerText= screenEl.innerText+nineEl.innerText.toString();
             })
+            zeroEl.addEventListener('click',()=>{
+                screenEl.innerText= screenEl.innerText+zeroEl.innerText.toString();
+            })
             dotEl.addEventListener('click',()=>{
-                if(screenEl.innerText.includes('.')) return ;
+                // if(screenEl.innerText.includes('.')) return ;
                 screenEl.innerText= screenEl.innerText+dotEl.innerText.toString();
             })
             minusEl.addEventListener('click',()=>{
